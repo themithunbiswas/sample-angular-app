@@ -13,9 +13,9 @@ phases:
   build:
     commands:
       - ng build
+      - ls
 artifacts:
   files:
     - 'dist/*'
   name: myname-$(date +%Y-%m-%d)
-  base-directory: dist
   discard-paths: yes
