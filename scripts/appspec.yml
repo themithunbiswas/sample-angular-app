@@ -5,11 +5,11 @@ files:
     destination: /var/www/html
 hooks:
   ApplicationStop:
-    - location: ./scripts/app_stop.sh
+    - location: ./app_stop.sh
       timeout: 10
   ApplicationStart:
-    - location: ./scripts/app_start.sh
+    - location: ./app_start.sh
       timeout: 10
   ValidateService:
-    - location: ./scripts/vld_app.sh
+    - location: ./vld_app.sh
       timeout: 30

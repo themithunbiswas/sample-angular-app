@@ -16,6 +16,7 @@ phases:
   post_build:
     commands:
       - ls -a
+      - cp ./scripts/* ./dist/
 artifacts:
   files:
     - 'dist/**/*'
