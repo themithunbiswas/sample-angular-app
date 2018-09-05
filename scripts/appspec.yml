@@ -4,6 +4,10 @@ files:
   - source: .
     destination: /var/www/html
 hooks:
+  BeforeInstall:
+    - location: ./clean.sh
+      timeout: 300
+      runas: root
   ApplicationStop:
     - location: ./app_stop.sh
       timeout: 10
