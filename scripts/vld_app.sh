@@ -1,4 +1,3 @@
-#!/bin/bash
 status_code=$(curl --silent --head 0.0.0.0 | grep HTTP/ | awk -F ' ' '{ print $2 }')
 
 if [[ $status_code == "200" ]]; then
