@@ -5,18 +5,18 @@ files:
     destination: /var/www/html/app
 hooks:
   BeforeInstall:
-    - location: ./clean.sh
+    - location: clean.sh
       timeout: 30
       runas: root
   ApplicationStop:
-    - location: ./app_stop.sh
+    - location: app_stop.sh
       timeout: 10
       runas: root
   ApplicationStart:
-    - location: ./app_start.sh
+    - location: app_start.sh
       timeout: 10
       runas: root
   ValidateService:
-    - location: ./vld_app.sh
+    - location: vld_app.sh
       timeout: 30
       runas: root
