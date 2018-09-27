@@ -1,4 +1,4 @@
-status_code=$(curl -sL -w "%{http_code}\\n" "localhost/app" -o /dev/null)
+status_code=$(curl -sL -w "%{http_code}\\n" "localhost" -o /dev/null)
 
 if [[ $status_code == "200" ]]; then
     echo 'ok'
